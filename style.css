@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("Pacifico-Regular.ttf"); /*fonte baixada e usada no li#adote*/
+  }
+  @font-face {
+    font-family: 'FonteMenu';
+    src: url("Overpass-VariableFont_wght.ttf"); /*fonte baixada e usada no menu*/
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    width: 98%;
+    height: 100%;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 19px;
+    height: 80px; /*pra caixa nao aumentar de tamanho quando eu passar o mouse*/
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+    margin-right: -53px;
+}
+
+
+div#adote{
+    background-color: #FFFDF4;
+    color: #fd764e;
+    font-family: 'FonteLogo';
+    font-size: 33px;
+    width: 65%;
+    padding-top: 9px;    
+    padding-left: 40px;
+
+}
+
+div#adote img{
+    position: absolute;
+    padding-top: 8px;
+    padding-left: 15px;
+}
+
+div#adote:hover{
+    font-size: 35px;
+    transition: 0.5s;
+
+
+}
+
+div#home, div#sobre, div#contato {
+    background-color: #fc8461;
+    padding: 25px;
+    font-family: 'FonteMenu';
+    font-weight: bold;
+    color: rgb(34, 34, 32);
+    width: 9%;
+    align-items: center;
+    text-align: center;
+    margin-right: 0;
+
+
+}
+div#home:hover{
+    background-color: #e9572c;
+    color: #fff7dd;    
+    transition: 1s;
+}
+
+div#sobre:hover{
+    background-color: #e9572c;
+    color: #fff7dd;  
+    transition: 0.8s;
+
+}
+div#contato:hover{
+    background-color: #e9572c;
+    color: #fff7dd;
+    transition: 1s;
+
+}
+
+.cachorros{
+    width: 100%;
+    margin: 25px ;
+    margin-top: 30px;
+    box-sizing: border-box;
+    display: flex;   
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.cachorros li{  /*se eu nao colocar li apos a classe, ele não da certo*/
+    list-style: none;
+  /*  display: inline-block;
+    margin-bottom: 20px;
+    text-align: center; */
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:  5px -20px 10px;
+    margin-bottom: 45px;
+
+}
+
+.cachorros li:hover img{
+    border: solid #fc8461;
+
+
+}
+
+.cachorros img{
+    width: 70%;
+    border-radius: 15px;
+}
+
+main p{
+    font-family: 'FonteLogo';
+    color: #fd764e;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 38px;
+
+    
+}
+
+.gatos{
+    width: 100%;
+    margin: 15px ;
+    box-sizing: border-box;
+    display: flex;   
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.gatos li{  
+    list-style: none;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:  10px -20px ;
+    margin-bottom: 45px;
+
+
+}
+
+.gatos img{
+    width: 70%;
+    border-radius: 15px;
+}
+.gatos li:hover img{
+    border: solid #fc8461;
+
+
+}
+
+.rodape{
+    background-color: #e9572c;
+    width: 104.1%;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: papayawhip;
+    font-size: 23px;
+    font-family: 'FonteMenu';
+}
+
+.rodape img{
+    display: flex;
+    position: absolute;
+    margin-top: 50px;    
+}
+
+
+@media(max-width: 700px){
+
+    .container{ 
+        flex-direction: column;    
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    div#adote{
+            display: none;
+    }
+
+    div#home, div#sobre, div#contato{
+        font-size: 15px;
+        width: 100%;
+    }
+
+    main p{
+        font-size: 20px;
+    }
+    header img{
+        display: none;
+    }
+
+    .cachorros{
+        display: flex;
+        flex-direction: column;
+    }
+    .cachorros li{
+        width: 90%;
+        margin-left: 15px;
+    }
+
+    .gatos li{
+        width: 100%;
+    }
+
+
+}
