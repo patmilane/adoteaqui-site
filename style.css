@@ -10,6 +10,8 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /*para as imagens da lista não sofrerem quebra quando passado o mouse*/
+
 }
 
 body, html{
@@ -42,16 +44,18 @@ div#adote{
 
 div#adote img{
     position: absolute;
-    padding-top: 8px;
+    padding-top: 10px;
     padding-left: 15px;
 }
 
 div#adote:hover{
     font-size: 35px;
     transition: 0.5s;
-
+    margin-top: -2px;
+    margin-left: -2px;
 
 }
+
 
 div#home, div#sobre, div#contato {
     background-color: #fc8461;
@@ -59,7 +63,7 @@ div#home, div#sobre, div#contato {
     font-family: 'FonteMenu';
     font-weight: bold;
     color: rgb(34, 34, 32);
-    width: 9%;
+    width: 12%;
     align-items: center;
     text-align: center;
     margin-right: 0;
@@ -98,9 +102,6 @@ div#contato:hover{
 
 .cachorros li{  /*se eu nao colocar li apos a classe, ele não da certo*/
     list-style: none;
-  /*  display: inline-block;
-    margin-bottom: 20px;
-    text-align: center; */
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -112,8 +113,9 @@ div#contato:hover{
 }
 
 .cachorros li:hover img{
+    transform: scale(1.1); /*usar ao inves do width, pois assim n quebra a pag*/
+    transition: 0.6s;
     border: solid #fc8461;
-
 
 }
 
@@ -161,8 +163,8 @@ main p{
 }
 .gatos li:hover img{
     border: solid #fc8461;
-
-
+    transform: scale(1.1); 
+    transition: 0.6s;
 }
 
 .rodape{
@@ -192,7 +194,7 @@ main p{
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: auto;
+        height: 30%;
     }
 
     div#adote{
@@ -201,7 +203,7 @@ main p{
 
     div#home, div#sobre, div#contato{
         font-size: 15px;
-        width: 100%;
+        width: 110%;
     }
 
     main p{
@@ -211,17 +213,26 @@ main p{
         display: none;
     }
 
-    .cachorros{
+    ul{
         display: flex;
-        flex-direction: column;
+        flex: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    }
+
+    .cachorros{
+        margin: 10px;
+    }
+    .cachorros ul {
+        width: 100%;
     }
     .cachorros li{
-        width: 90%;
-        margin-left: 15px;
+        width: 80%;
     }
 
     .gatos li{
-        width: 100%;
+        width: 80%;
     }
 
 
