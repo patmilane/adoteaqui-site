@@ -1,5 +1,5 @@
 # adote-aqui
 
-Projeto AdoteAqui! - Resilia (T13)
+Interface HTML + CSS
 
 ## GitHub Pages https://kashitso.github.io/adote-aqui1/
